@@ -13,22 +13,22 @@ class Chatroom extends React.Component {
                 id:1,
                 username: "chandan kuiry",
                 content: <p>Hello Guys</p>,
-                img: "https://thumbs.dreamstime.com/b/green-ecosystem-forest-tree-102707634.jpg",
+                img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
             }, {
                 id:2,
                 username: "rahul dey",
                 content: <p>Hii</p>,
-                img: "https://thumbs.dreamstime.com/b/green-ecosystem-forest-tree-102707634.jpg",
+                img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
             }, {
                 id:3,
                 username: "chandanku",
                 content: <p>hii</p>,
-                img: "https://avatars2.githubusercontent.com/u/10672205?s=400&u=4d1a09560375044295dcf4f2fe1a5df9e21d186d&v=4",
+                img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
             }, {
                 id:4,
                 username: "chandanba",
                 content: <p>yup</p>,
-                img: "https://thumbs.dreamstime.com/b/green-ecosystem-forest-tree-102707634.jpg",
+                img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
             }]
         };
 
@@ -54,7 +54,7 @@ class Chatroom extends React.Component {
             chats: this.state.chats.concat([{
                 username: "chandan kuiry",
                 content: <p>{ReactDOM.findDOMNode(this.refs.msg).value}</p>,
-                img: "https://thumbs.dreamstime.com/b/green-ecosystem-forest-tree-102707634.jpg",
+                img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
             }])
         }, () => {
             ReactDOM.findDOMNode(this.refs.msg).value = "";
@@ -67,7 +67,7 @@ class Chatroom extends React.Component {
 
         return (
             <div className="chatroom">
-                <h3>Chatapp</h3>
+                <h3>React Chat APP</h3>
                 <ul className="chats" ref="chats">
                     {
                         chats.map((chat) => 
@@ -76,7 +76,7 @@ class Chatroom extends React.Component {
                     }
                 </ul>
                 <form className="input" onSubmit={(e) => this.submitMessage(e)}>
-                    <input type="text" ref="msg" />
+                    <input type="text" ref="msg" required/>
                     <input type="submit" value="Submit" />
                 </form>
             </div>
